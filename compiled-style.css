@@ -1,0 +1,130 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+button {
+  display: inline-block;
+  margin: 0;
+  font-family: serif;
+  line-height: 1.8;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0; }
+
+@font-face {
+  font-family: 'latin_modern_roman_dunhil10Rg';
+  src: url("./fonts/latinmodernromandunhill_10regular_macroman/lmromandunh10-regular-webfont.eot");
+  src: url("./fonts/latinmodernromandunhill_10regular_macroman/lmromandunh10-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/latinmodernromandunhill_10regular_macroman/lmromandunh10-regular-webfont.woff") format("woff"), url("./fonts/latinmodernromandunhill_10regular_macroman/lmromandunh10-regular-webfont.ttf") format("truetype"), url("./fonts/latinmodernromandunhill_10regular_macroman/lmromandunh10-regular-webfont.svg#latin_modern_roman_dunhil10Rg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  width: 100%; }
+
+#invitation {
+  background: #dcffed;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px; }
+  #invitation img.crest {
+    width: 40%;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin: 2em 0; }
+  #invitation span {
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding: 0.5em;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  #invitation .title {
+    font-family: 'Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 45pt; }
+  #invitation .lead {
+    font-family: 'Latin Modern Roman Dunhill', 'latin_modern_roman_dunhil10Rg';
+    font-size: 24pt; }
+  #invitation .details {
+    font-family: 'Sawasdee', sans-serif;
+    font-size: 20pt;
+    padding: 0; }
+  #invitation .sauvies {
+    margin-top: 2em; }
+  #invitation .date {
+    margin-top: 2em; }
+  #invitation .rsvp-row {
+    position: relative;
+    height: 20em; }
+    #invitation .rsvp-row img.evan {
+      width: 20%;
+      position: absolute;
+      bottom: 0;
+      left: 0; }
+    #invitation .rsvp-row img.lucy {
+      width: 20%;
+      position: absolute;
+      bottom: 0;
+      right: 0; }
+    #invitation .rsvp-row .buttons {
+      padding-top: 2em;
+      margin: 0 auto;
+      width: 60%; }
+      #invitation .rsvp-row .buttons button {
+        font-family: 'Latin Modern Roman Dunhill', 'latin_modern_roman_dunhil10Rg';
+        font-size: 32pt;
+        display: block;
+        border: solid 3px black;
+        background: transparent;
+        margin: 1em auto;
+        width: 60%; }
+/*# sourceMappingURL=compiled-style.css.map */

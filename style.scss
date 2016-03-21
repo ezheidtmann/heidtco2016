@@ -1,0 +1,116 @@
+@import "./bower_components/susy/sass/susy";
+@import "./bower_components/breakpoint-sass/stylesheets/breakpoint";
+
+@import "reset";
+
+@font-face {
+    font-family: 'latin_modern_roman_dunhil10Rg';
+    src: url('./fonts/latinmodernromandunhill_10regular_macroman/lmromandunh10-regular-webfont.eot');
+    src: url('./fonts/latinmodernromandunhill_10regular_macroman/lmromandunh10-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/latinmodernromandunhill_10regular_macroman/lmromandunh10-regular-webfont.woff') format('woff'),
+         url('./fonts/latinmodernromandunhill_10regular_macroman/lmromandunh10-regular-webfont.ttf') format('truetype'),
+         url('./fonts/latinmodernromandunhill_10regular_macroman/lmromandunh10-regular-webfont.svg#latin_modern_roman_dunhil10Rg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin font-lead {
+  font-family: 'Latin Modern Roman Dunhill', 'latin_modern_roman_dunhil10Rg';
+  font-size: 24pt;
+}
+
+@mixin font-title {
+  font-family: 'Sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 45pt;
+}
+
+@mixin font-details {
+  font-family: 'Sawasdee', sans-serif;
+  font-size: 20pt;
+}
+
+@mixin font-buttons {
+  font-family: 'Latin Modern Roman Dunhill', 'latin_modern_roman_dunhil10Rg';
+  font-size: 32pt;
+}
+  
+
+body {
+  width: 100%;
+}
+#invitation {
+  background: darken(#f5fffa, 5%);
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  img.crest {
+    width: 40%;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2em 0;
+  }
+
+  span {
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding: 0.5em;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .title {
+    @include font-title;
+  }
+  .lead {
+    @include font-lead;
+  }
+  .details {
+    @include font-details;  
+    padding: 0;
+  }
+  .sauvies {
+    margin-top: 2em;
+  }
+  .date {
+    margin-top: 2em;
+  }
+
+  .rsvp-row {
+    position: relative;
+    height: 20em;
+    img.evan {
+      width: 20%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    img.lucy {
+      width: 20%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    .buttons {
+      padding-top: 2em;
+      margin: 0 auto;
+      width: 60%;
+      button {
+        @include font-buttons;
+        display: block;
+        border: solid 3px black;
+        background: transparent;
+        margin: 1em auto;
+        width: 60%;
+      }
+    }
+  }
+
+
+
+}

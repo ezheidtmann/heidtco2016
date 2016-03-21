@@ -1,0 +1,23 @@
+{
+  "name": "jfire-template",
+  "version": "0.1",
+  "authors": [
+    "Jesse Firestone <firestonej@gmail.com>"
+  ],
+  "description": "Susy/Breakpoint boilerplate",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "keywords": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "breakpoint-sass": "~2.5.0",
+    "susy": "~2.2.2"
+  }
+}
