@@ -3,20 +3,40 @@
 
 @import "reset";
 
+$bp-large: 881px, 'no-query' '.no-mediaqueries';
+$bp-medium: 601px 880px;
+$bp-small: 0px 600px;
+$bp-smmd: 0px 880px;
+
 @font-face {
-    font-family: 'latin_modern_roman_dunhil10Rg';
-    src: url('./fonts/latinmodernromandunhill_10regular_macroman/lmromandunh10-regular-webfont.eot');
-    src: url('./fonts/latinmodernromandunhill_10regular_macroman/lmromandunh10-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/latinmodernromandunhill_10regular_macroman/lmromandunh10-regular-webfont.woff') format('woff'),
-         url('./fonts/latinmodernromandunhill_10regular_macroman/lmromandunh10-regular-webfont.ttf') format('truetype'),
-         url('./fonts/latinmodernromandunhill_10regular_macroman/lmromandunh10-regular-webfont.svg#latin_modern_roman_dunhil10Rg') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'latin_modern_roman_dunhil10Rg';
+  src: url('./fonts/latinmodernromandunhill_10regular_macroman/lmromandunh10-regular-webfont.eot');
+  src: url('./fonts/latinmodernromandunhill_10regular_macroman/lmromandunh10-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/latinmodernromandunhill_10regular_macroman/lmromandunh10-regular-webfont.woff') format('woff'),
+       url('./fonts/latinmodernromandunhill_10regular_macroman/lmromandunh10-regular-webfont.ttf') format('truetype'),
+       url('./fonts/latinmodernromandunhill_10regular_macroman/lmromandunh10-regular-webfont.svg#latin_modern_roman_dunhil10Rg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SawasdeeRegular';
+  src: url('./fonts/sawasdee-webfont/sawasdee-webfont.eot');
+  src: url('./fonts/sawasdee-webfont/sawasdee-webfont.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/sawasdee-webfont/sawasdee-webfont.woff') format('woff'),
+       url('./fonts/sawasdee-webfont/sawasdee-webfont.ttf') format('truetype'),
+       url('./fonts/sawasdee-webfont/sawasdee-webfont.svg#SawasdeeRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @mixin font-lead {
   font-family: 'Latin Modern Roman Dunhill', 'latin_modern_roman_dunhil10Rg';
   font-size: 24pt;
+  @include breakpoint($bp-small) {
+    font-size: 20pt;
+  }
+  line-height: 1.5em;
 }
 
 @mixin font-title {
@@ -26,27 +46,35 @@
 }
 
 @mixin font-details {
-  font-family: 'Sawasdee', sans-serif;
+  font-family: 'Sawasdee', 'SawasdeeRegular', sans-serif;
   font-size: 20pt;
+  line-height: 1.1em;
 }
 
 @mixin font-buttons {
   font-family: 'Latin Modern Roman Dunhill', 'latin_modern_roman_dunhil10Rg';
   font-size: 32pt;
+  @include breakpoint($bp-small) {
+    font-size: 20pt;
+  }
 }
   
 
 body {
   width: 100%;
+  background: darken(#f5fffa, 5%);
+  //background: #CCCCFF;
 }
 #invitation {
-  background: darken(#f5fffa, 5%);
   position: relative;
   margin: 0 auto;
   width: 100%;
   max-width: 800px;
   img.crest {
     width: 40%;
+    @include breakpoint($bp-small) {
+      width: 90%;
+    }
 
     position: relative;
     left: 50%;
@@ -72,7 +100,7 @@ body {
   }
   .details {
     @include font-details;  
-    padding: 0;
+    padding: 0 0.5em;
   }
   .sauvies {
     margin-top: 2em;
@@ -82,19 +110,19 @@ body {
   }
 
   .rsvp-row {
+    overflow: hidden;
     position: relative;
-    height: 20em;
     img.evan {
       width: 20%;
       position: absolute;
       bottom: 0;
-      left: 0;
+      left: 2px;
     }
     img.lucy {
       width: 20%;
       position: absolute;
-      bottom: 0;
-      right: 0;
+      bottom: -2px;
+      right: 2px;
     }
     .buttons {
       padding-top: 2em;
@@ -106,7 +134,7 @@ body {
         border: solid 3px black;
         background: transparent;
         margin: 1em auto;
-        width: 60%;
+        width: 80%;
       }
     }
   }
