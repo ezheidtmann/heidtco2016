@@ -1,0 +1,64 @@
+#!/bin/bash
+
+docker-compose ps -q 2>/dev/null >/dev/null
+status=$?
+if [ "$status" -eq "1" ]; then
+  if [ "$(uname)" == "Darwin" ]; then
+    if [ `docker-machine status default` != "Running" ]; then
+      echo -n "Starting docker-machine default ... "
+      docker-machine start default > /dev/null
+      echo "done"
+    fi
+
+    echo -n "Activating docker-machine env default ..."
+    eval "$(docker-machine env default)"
+    echo " done!"
+  fi
+fi
+
+docker-compose ps -q 2>/dev/null >/dev/null
+status=$?
+if [ "$status" -eq "1" ]; then
+  echo "Your docker-compose is not set up right. Here are some ideas:"
+  if [ "$(uname)" == "Darwin" ]; then
+    echo "  0) Install VirtualBox and brew"
+    echo "  1) brew install docker docker-compose"
+    echo "  2) docker-machine create --driver virtualbox default"
+    echo "  3) Verify that this runs without errors: docker-machine env default"
+    echo "  4) Source this script again"
+  elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    echo "  Maybe: apt-get install docker docker-compose"
+    echo "  https://docs.docker.com/engine/installation/linux/ubuntulinux/"
+  fi
+
+  return
+fi
+
+# If any containers are stopped, bring them up again
+if [ 3 -ne `docker-compose ps | tail -n +3 | grep -v 'Exit' | wc -l` ]; then
+  docker-compose up -d db
+fi
+
+DB=`docker-compose ps -q db`
+DB_IP=`docker inspect --format '{{ .NetworkSettings.IPAddress }}' $DB`
+export DATABASE_URL="postgres://postgres:devzone@$DB_IP:5432/postgres"
+
+if [ -f .env ]; then
+  source .env
+fi
+
+# Check for connectivity
+if ! ping -c 1 -t 1 "$DB_IP" > /dev/null; then
+  if [ "$(uname)" == "Darwin" ]; then
+    echo "Cannot ping db, attempting to setup routing. DB_IP=$DB_IP"
+    set -e
+    ./docker/setup-mac-routing
+    if ! ping -c 1 -t 1 "$DB_IP" > /dev/null; then
+      echo "Still cannot ping DB. :-("
+    else
+      echo "We're good!"
+    fi
+  else
+    echo "Cannot ping db. You probably have to fix this."
+  fi
+fi

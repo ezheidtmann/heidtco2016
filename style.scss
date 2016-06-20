@@ -172,6 +172,9 @@ body {
         width: 80%;
       }
     }
+    .form-container {
+      position: relative;
+    }
     form {
       display: none;
       @include font-lead;
@@ -207,6 +210,30 @@ body {
           background: rgba(255, 255, 255, 0.4);
         }
       }
+      visibility: visible;
+      opacity: 1;
+      &.done {
+        transition-property: opacity;
+        transition-duration: 0.5s;
+        opacity: 0;
+      }
+    }
+    .thanks {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      display: none;
+      visibility: none;
+      opacity: 0;
+      &.show {
+        display: block;
+        visibility: visible;
+        transition-property: opacity;
+        transition-duration: 0.5s;
+        opacity: 1
+      }
+      p { font-size: 20pt }
     }
   }
 }

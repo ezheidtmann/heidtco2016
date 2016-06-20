@@ -171,11 +171,15 @@ body {
         @media (min-width: 0px) and (max-width: 600px) {
           #invitation .rsvp .buttons button {
             font-size: 20pt; } }
+    #invitation .rsvp .form-container {
+      position: relative; }
     #invitation .rsvp form {
       display: none;
       font-family: 'Latin Modern Roman Dunhill', 'latin_modern_roman_dunhil10Rg';
       font-size: 24pt;
-      line-height: 1.5em; }
+      line-height: 1.5em;
+      visibility: visible;
+      opacity: 1; }
       @media (min-width: 0px) and (max-width: 600px) {
         #invitation .rsvp form {
           font-size: 20pt; } }
@@ -214,4 +218,25 @@ body {
             font-size: 20pt; } }
         #invitation .rsvp form input[type=submit]:hover {
           background: rgba(255, 255, 255, 0.4); }
+      #invitation .rsvp form.done {
+        transition-property: opacity;
+        transition-duration: 0.5s;
+        opacity: 0; }
+    #invitation .rsvp .thanks {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translateY(-50%) translateX(-50%);
+              transform: translateY(-50%) translateX(-50%);
+      display: none;
+      visibility: none;
+      opacity: 0; }
+      #invitation .rsvp .thanks.show {
+        display: block;
+        visibility: visible;
+        transition-property: opacity;
+        transition-duration: 0.5s;
+        opacity: 1; }
+      #invitation .rsvp .thanks p {
+        font-size: 20pt; }
 /*# sourceMappingURL=compiled-style.css.map */

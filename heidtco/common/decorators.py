@@ -1,0 +1,4 @@
+from .middleware import GunzipRequestMiddleware
+from django.utils.decorators import decorator_from_middleware
+
+gunzip_request_body = decorator_from_middleware(GunzipRequestMiddleware)

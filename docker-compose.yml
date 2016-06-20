@@ -1,0 +1,4 @@
+db:
+  image: mdillon/postgis
+  environment:
+    POSTGRES_PASSWORD: devzone

@@ -80,10 +80,7 @@ module.exports = function(grunt) {
           },
           options: {
             watchTask: true,
-            server: {
-              baseDir: './'
-
-            }
+            proxy: 'localhost:8000',
           }
         }
 
