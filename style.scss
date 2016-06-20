@@ -8,6 +8,11 @@ $bp-medium: 601px 880px;
 $bp-small: 0px 600px;
 $bp-smmd: 0px 880px;
 
+// http://paletton.com/#uid=71p1Q0kpWvKccOljSCAv7q7Auir
+$c-gold: #fdd930;
+$c-green: #417975;
+$c-orange: lighten(#E7902B, 15%);
+
 @font-face {
   font-family: 'latin_modern_roman_dunhil10Rg';
   src: url('./fonts/latinmodernromandunhill_10regular_macroman/lmromandunh10-regular-webfont.eot');
@@ -58,20 +63,48 @@ $bp-smmd: 0px 880px;
     font-size: 20pt;
   }
 }
-  
+
 
 body {
   width: 100%;
-  background: darken(#f5fffa, 5%);
-  //background: #CCCCFF;
+  background: $c-green;
 }
+
 #invitation {
+  background: #fff;
   position: relative;
   margin: 0 auto;
   width: 100%;
-  max-width: 800px;
-  img.crest {
-    width: 40%;
+  max-width: 1000px;
+  .faces-container {
+    width: 100%;
+    background: $c-gold;
+    padding: 2em 0;
+  }
+
+  .banner-container {
+    width: 100%;
+    background: #fff;
+    padding: 2em 0;
+    img.invite-you-to {
+      width: 75%;
+    }
+  }
+
+  .crest-container {
+    width: 100%;
+    background: $c-gold;
+    img.crest {
+      width: 315px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    padding: 2em 0;
+  }
+
+  img.fwc {
+    width: 90%;
     @include breakpoint($bp-small) {
       width: 90%;
     }
@@ -79,7 +112,7 @@ body {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    margin: 2em 0;
+    margin: 0 0;
   }
 
   span {
@@ -92,15 +125,23 @@ body {
     left: 50%;
     transform: translateX(-50%);
   }
-  .title {
-    @include font-title;
-  }
-  .lead {
-    @include font-lead;
-  }
   .details {
-    @include font-details;  
+    @include font-details;
     padding: 0 0.5em;
+    text-align: center;
+    line-height: 130%;
+    a, a:visited {
+      color: #000;
+      text-decoration: none;
+    }
+    a:hover, a:active {
+      color: #444;
+      text-decoration: underline;
+    }
+    strong {
+      line-height: 200%;
+      font-weight: bold;
+    }
   }
   .sauvies {
     margin-top: 2em;
@@ -109,23 +150,16 @@ body {
     margin-top: 2em;
   }
 
-  .rsvp-row {
+  .rsvp {
+    background: $c-orange;
     overflow: hidden;
     position: relative;
-    img.evan {
-      width: 20%;
-      position: absolute;
-      bottom: 0;
-      left: 2px;
-    }
-    img.lucy {
-      width: 20%;
-      position: absolute;
-      bottom: -2px;
-      right: 2px;
+    p {
+      padding: 1em 0;
+      text-align: center;
+      @include font-buttons;
     }
     .buttons {
-      padding-top: 2em;
       margin: 0 auto;
       width: 60%;
       button {
@@ -134,11 +168,45 @@ body {
         border: solid 3px black;
         background: transparent;
         margin: 1em auto;
+        cursor: pointer;
         width: 80%;
       }
     }
+    form {
+      display: none;
+      @include font-lead;
+      label { display: block; text-align: center; }
+      textarea, input { display: block; margin: 0 auto; }
+      textarea, input[type=text] {
+        font-family: 'Latin Modern Roman Dunhill', 'latin_modern_roman_dunhil10Rg';
+        font-size: 14pt;
+        @include breakpoint($bp-small) {
+          font-size: 10pt;
+        }
+        line-height: 1.5em;
+        width: 90%;
+        padding: 0.5em;
+      }
+      textarea {
+        height: 15em;
+      }
+      label {
+        font-size: 14pt;
+        text-align: left;
+        font-style: italic;
+        padding-left: 5%;
+      }
+      input[type=submit] {
+        @include font-buttons;
+        border: solid 3px black;
+        background: transparent;
+        margin: 1em auto;
+        padding: 0 1em;
+        cursor: pointer;
+        &:hover {
+          background: rgba(255, 255, 255, 0.4);
+        }
+      }
+    }
   }
-
-
-
 }

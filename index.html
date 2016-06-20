@@ -19,28 +19,47 @@
 <![endif]-->
 
 <div id="invitation">
-  <img class="crest" src="./crest.png" />
-  <span class="lead">With great joy, we,</span>
-  <span class="title">Evan &amp; Lucy</span>
-  <span class="lead">invite you to celebrate our wedding day!</span>
+  <div class="faces-container">
+    <img class="fwc faces" src="./assets/faces.jpg" alt="" />
+  </div>
+  <div class="banner-container">
+    <img class="fwc banner" src="./assets/banner.jpg" alt="We, Evan and Lucy" />
+    <img class="fwc invite-you-to" src="./assets/invite-you-to.jpg" alt="invite you to celebrate our wedding!" />
+  </div>
+  <div class="rsvp">
+    <p>Will you join us?</p>
 
-  <span class="details date">20 August 2016</span>
-  <span class="details">Ceremony at 5 o’clock in the afternoon</span>
-  <span class="details sauvies">Sauvie's Island</span>
-  <span class="details">Portland, Oregon</span>
-
-  <div class="rsvp-row">
-    <img class="evan" src="./evan-silouette.png">
-    <img class="lucy" src="./lucy-silouette.png">
-
+    <div class="details">
+      Saturday, 20 August 2016<br>
+      <a href="http://thecroftfarm.com/contact-us.html">The Croft</a> on
+      <a href="https://www.google.com/maps/@45.6323523,-122.8072324,68a,20y,162.97h,81.06t/data=!3m1!1e3" title="see a map">Sauvie's Island, OR</a><br>
+      <strong>5 pm</strong>
+    </div>
     <div class="buttons">
       <button class="rsvp rsvp-yes">Yes! 😀</button>
       <button class="rsvp rsvp-regrets">Regrets 😢</button>
     </div>
-
+    <form class="yes">
+      <label for="form-yes-details">Tell us more! How many are coming? Do you like camping? Diet preferences? Anything else?</label>
+      <textarea id="form-yes-details" name="details"></textarea>
+      <label for="form-yes-email">E-mail address, please!</label>
+      <input type="text" name="email" id="form-yes-email" placeholder="your@email.com" />
+      <input type="submit" value="Awesome! RSVP! 😀">
+    </form>
+    <form class="regrets">
+      <label for="form-regrets-details">Too bad! We'll miss you.</label>
+      <textarea name="details" id="form-regrets-details" placeholder="Tell us more!"></textarea>
+      <label for="form-yes-email">We'll send you photos!</label>
+      <input type="text" name="email" id="form-regrets-email" placeholder="your@email.com" />
+      <input type="submit" value="Bummer 😢">
+    </form>
+  </div>
+  <div class="crest-container">
+    <img class="crest" src="./assets/crest.jpg" />
   </div>
 </div>
 
+<script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
 <script src="production.js"></script>
 
 <script>

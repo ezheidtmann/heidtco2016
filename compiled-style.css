@@ -76,22 +76,43 @@ html {
 
 body {
   width: 100%;
-  background: #dcffed; }
+  background: #417975; }
 
 #invitation {
+  background: #fff;
   position: relative;
   margin: 0 auto;
   width: 100%;
-  max-width: 800px; }
-  #invitation img.crest {
-    width: 40%;
+  max-width: 1000px; }
+  #invitation .faces-container {
+    width: 100%;
+    background: #fdd930;
+    padding: 2em 0; }
+  #invitation .banner-container {
+    width: 100%;
+    background: #fff;
+    padding: 2em 0; }
+    #invitation .banner-container img.invite-you-to {
+      width: 75%; }
+  #invitation .crest-container {
+    width: 100%;
+    background: #fdd930;
+    padding: 2em 0; }
+    #invitation .crest-container img.crest {
+      width: 315px;
+      position: relative;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%); }
+  #invitation img.fwc {
+    width: 90%;
     position: relative;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-    margin: 2em 0; }
+    margin: 0 0; }
     @media (min-width: 0px) and (max-width: 600px) {
-      #invitation img.crest {
+      #invitation img.fwc {
         width: 90%; } }
   #invitation span {
     width: 100%;
@@ -103,52 +124,94 @@ body {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%); }
-  #invitation .title {
-    font-family: 'Sans', sans-serif;
-    text-transform: uppercase;
-    font-size: 45pt; }
-  #invitation .lead {
-    font-family: 'Latin Modern Roman Dunhill', 'latin_modern_roman_dunhil10Rg';
-    font-size: 24pt;
-    line-height: 1.5em; }
-    @media (min-width: 0px) and (max-width: 600px) {
-      #invitation .lead {
-        font-size: 20pt; } }
   #invitation .details {
     font-family: 'Sawasdee', 'SawasdeeRegular', sans-serif;
     font-size: 20pt;
     line-height: 1.1em;
-    padding: 0 0.5em; }
+    padding: 0 0.5em;
+    text-align: center;
+    line-height: 130%; }
+    #invitation .details a, #invitation .details a:visited {
+      color: #000;
+      text-decoration: none; }
+    #invitation .details a:hover, #invitation .details a:active {
+      color: #444;
+      text-decoration: underline; }
+    #invitation .details strong {
+      line-height: 200%;
+      font-weight: bold; }
   #invitation .sauvies {
     margin-top: 2em; }
   #invitation .date {
     margin-top: 2em; }
-  #invitation .rsvp-row {
+  #invitation .rsvp {
+    background: #efb470;
     overflow: hidden;
     position: relative; }
-    #invitation .rsvp-row img.evan {
-      width: 20%;
-      position: absolute;
-      bottom: 0;
-      left: 2px; }
-    #invitation .rsvp-row img.lucy {
-      width: 20%;
-      position: absolute;
-      bottom: -2px;
-      right: 2px; }
-    #invitation .rsvp-row .buttons {
-      padding-top: 2em;
+    #invitation .rsvp p {
+      padding: 1em 0;
+      text-align: center;
+      font-family: 'Latin Modern Roman Dunhill', 'latin_modern_roman_dunhil10Rg';
+      font-size: 32pt; }
+      @media (min-width: 0px) and (max-width: 600px) {
+        #invitation .rsvp p {
+          font-size: 20pt; } }
+    #invitation .rsvp .buttons {
       margin: 0 auto;
       width: 60%; }
-      #invitation .rsvp-row .buttons button {
+      #invitation .rsvp .buttons button {
         font-family: 'Latin Modern Roman Dunhill', 'latin_modern_roman_dunhil10Rg';
         font-size: 32pt;
         display: block;
         border: solid 3px black;
         background: transparent;
         margin: 1em auto;
+        cursor: pointer;
         width: 80%; }
         @media (min-width: 0px) and (max-width: 600px) {
-          #invitation .rsvp-row .buttons button {
+          #invitation .rsvp .buttons button {
             font-size: 20pt; } }
+    #invitation .rsvp form {
+      display: none;
+      font-family: 'Latin Modern Roman Dunhill', 'latin_modern_roman_dunhil10Rg';
+      font-size: 24pt;
+      line-height: 1.5em; }
+      @media (min-width: 0px) and (max-width: 600px) {
+        #invitation .rsvp form {
+          font-size: 20pt; } }
+      #invitation .rsvp form label {
+        display: block;
+        text-align: center; }
+      #invitation .rsvp form textarea, #invitation .rsvp form input {
+        display: block;
+        margin: 0 auto; }
+      #invitation .rsvp form textarea, #invitation .rsvp form input[type=text] {
+        font-family: 'Latin Modern Roman Dunhill', 'latin_modern_roman_dunhil10Rg';
+        font-size: 14pt;
+        line-height: 1.5em;
+        width: 90%;
+        padding: 0.5em; }
+        @media (min-width: 0px) and (max-width: 600px) {
+          #invitation .rsvp form textarea, #invitation .rsvp form input[type=text] {
+            font-size: 10pt; } }
+      #invitation .rsvp form textarea {
+        height: 15em; }
+      #invitation .rsvp form label {
+        font-size: 14pt;
+        text-align: left;
+        font-style: italic;
+        padding-left: 5%; }
+      #invitation .rsvp form input[type=submit] {
+        font-family: 'Latin Modern Roman Dunhill', 'latin_modern_roman_dunhil10Rg';
+        font-size: 32pt;
+        border: solid 3px black;
+        background: transparent;
+        margin: 1em auto;
+        padding: 0 1em;
+        cursor: pointer; }
+        @media (min-width: 0px) and (max-width: 600px) {
+          #invitation .rsvp form input[type=submit] {
+            font-size: 20pt; } }
+        #invitation .rsvp form input[type=submit]:hover {
+          background: rgba(255, 255, 255, 0.4); }
 /*# sourceMappingURL=compiled-style.css.map */
