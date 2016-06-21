@@ -76,7 +76,7 @@ html {
 
 body {
   width: 100%;
-  background: #417975; }
+  background: #efb470; }
 
 #invitation {
   background: #fff;
@@ -88,10 +88,16 @@ body {
     width: 100%;
     background: #fdd930;
     padding: 2em 0; }
+    @media (min-width: 0px) and (max-width: 600px) {
+      #invitation .faces-container {
+        padding: 0.5em 0; } }
   #invitation .banner-container {
     width: 100%;
     background: #fff;
     padding: 2em 0; }
+    @media (min-width: 0px) and (max-width: 600px) {
+      #invitation .banner-container {
+        padding: 1em 0; } }
     #invitation .banner-container img.invite-you-to {
       width: 75%; }
       @media (min-width: 0px) and (max-width: 600px) {
@@ -102,6 +108,7 @@ body {
     background: #fdd930;
     padding: 2em 0; }
     #invitation .crest-container img.crest {
+      max-width: 70%;
       width: 315px;
       position: relative;
       left: 50%;
@@ -117,7 +124,7 @@ body {
     @media (min-width: 0px) and (max-width: 600px) {
       #invitation img.fwc {
         width: 95%; } }
-  #invitation span {
+  #invitation > span {
     width: 100%;
     text-align: center;
     display: block;
@@ -135,20 +142,29 @@ body {
     text-align: center;
     line-height: 130%; }
     #invitation .details a, #invitation .details a:visited {
-      color: #000;
+      color: #fff;
       text-decoration: none; }
     #invitation .details a:hover, #invitation .details a:active {
-      color: #444;
+      color: #ddd;
       text-decoration: underline; }
     #invitation .details strong {
-      line-height: 200%;
+      line-height: 300%;
       font-weight: bold; }
+    #invitation .details .nobr {
+      white-space: nowrap; }
+    #invitation .details .vspace {
+      display: block;
+      height: 0.1em; }
+      @media (min-width: 0px) and (max-width: 600px) {
+        #invitation .details .vspace {
+          height: 0.5em; } }
   #invitation .sauvies {
     margin-top: 2em; }
   #invitation .date {
     margin-top: 2em; }
   #invitation .rsvp {
-    background: #efb470;
+    background: #417975;
+    color: white;
     overflow: hidden;
     position: relative; }
     #invitation .rsvp p {
@@ -168,7 +184,8 @@ body {
       #invitation .rsvp .buttons button {
         font-family: 'Latin Modern Roman Dunhill', 'latin_modern_roman_dunhil10Rg';
         font-size: 32pt;
-        border: solid 3px black;
+        border: solid 3px white;
+        color: white;
         background: transparent;
         margin: 1em auto;
         padding: 0 1em;
@@ -221,7 +238,8 @@ body {
       #invitation .rsvp form input[type=submit] {
         font-family: 'Latin Modern Roman Dunhill', 'latin_modern_roman_dunhil10Rg';
         font-size: 32pt;
-        border: solid 3px black;
+        border: solid 3px white;
+        color: white;
         background: transparent;
         margin: 1em auto;
         padding: 0 1em;
