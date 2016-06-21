@@ -14,7 +14,7 @@ class RSVPResource(resources.ModelResource):
 class RSVPAdmin(import_export.admin.ExportMixin, admin.ModelAdmin):
     resource_class = RSVPResource
 
-    list_display = ('modified', 'email', 'rsvp', 'details')
+    list_display = ('modified', 'status', 'email', 'rsvp', 'details')
     readonly_fields = ('first_seen', 'created', 'uuid', 'client_id')
 
     ordering = ('-modified',)
