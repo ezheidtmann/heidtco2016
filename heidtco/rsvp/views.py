@@ -17,11 +17,12 @@ class RSVPSerializer(serializers.ModelSerializer):
     rsvp = serializers.NullBooleanField()
     details = serializers.CharField(allow_blank=True)
     email = serializers.CharField(allow_blank=True)
+    status = serializers.CharField(required=False)
 
     class Meta:
         model = models.RSVP
         
-        fields = ['uuid', 'rsvp', 'details', 'email']
+        fields = ['uuid', 'rsvp', 'details', 'email', 'status']
 
 class RSVPViewSet(viewsets.ModelViewSet):
     serializer_class = RSVPSerializer

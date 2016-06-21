@@ -4,6 +4,7 @@ from . import models
 # Register your models here.
 
 class RSVPAdmin(admin.ModelAdmin):
-    list_display = ('rsvp', 'email', 'details')
+    list_display = ('modified', 'email', 'rsvp', 'details')
+    readonly_fields = ('first_seen', 'created', 'uuid', 'client_id')
 
 admin.site.register(models.RSVP, RSVPAdmin)

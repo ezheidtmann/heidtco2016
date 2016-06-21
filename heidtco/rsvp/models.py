@@ -12,5 +12,12 @@ class RSVP(common.models.AutoDateModel):
     rsvp = models.NullBooleanField()
     details = models.TextField(default='')
     email = models.CharField(max_length=255, blank=True, default='')
+    STATUS_IN_PROGRESS = 'in-progress'
+    STATUS_COMPLETE = 'complete'
+    STATUS_CHOICES = (
+        (STATUS_IN_PROGRESS, STATUS_IN_PROGRESS),
+        (STATUS_COMPLETE, STATUS_COMPLETE),
+    )
+    status = models.CharField(max_length=25, choices=STATUS_CHOICES, default=STATUS_IN_PROGRESS)
 
 # Create your models here.
