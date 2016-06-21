@@ -4,6 +4,6 @@ from . import models
 # Register your models here.
 
 class RSVPAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('rsvp', 'email', 'details')
 
 admin.site.register(models.RSVP, RSVPAdmin)

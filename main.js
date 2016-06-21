@@ -73,6 +73,7 @@
   $(document).on('submit', 'form[ajax-rsvp]', function(ev) {
     ev.preventDefault();
     var $form = $(this);
+    $form.find('[type=submit]').prop('disabled', true);
     save_form($form, { status: 'complete' }).done(function(data, textStatus, jqXHR) {
       console.log('saved rsvp complete', rsvp_id);
     });
