@@ -125,6 +125,19 @@ body {
     padding: 2em 0;
   }
 
+  .footer-container {
+    width: 100%;
+    background: $c-green;
+    color: white;
+    @include font-details;
+    font-size: 12pt;
+    padding: 2em 2em;
+    p { margin-bottom: 1em; }
+    p:last-child { margin-bottom: 0; }
+    a, a:visited { color: #eee; }
+    a:hover { color: #ccc; }
+  }
+
   img.fwc {
     width: 70%;
     @include breakpoint($bp-small) {
@@ -224,6 +237,9 @@ body {
       }
       textarea {
         height: 15em;
+        @include breakpoint($bp-small) {
+          height: 7em;
+        }
       }
       label {
         font-size: 14pt;

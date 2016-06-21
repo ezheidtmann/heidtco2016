@@ -114,6 +114,23 @@ body {
       left: 50%;
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%); }
+  #invitation .footer-container {
+    width: 100%;
+    background: #417975;
+    color: white;
+    font-family: 'Sawasdee', 'SawasdeeRegular', sans-serif;
+    font-size: 20pt;
+    line-height: 1.1em;
+    font-size: 12pt;
+    padding: 2em 2em; }
+    #invitation .footer-container p {
+      margin-bottom: 1em; }
+    #invitation .footer-container p:last-child {
+      margin-bottom: 0; }
+    #invitation .footer-container a, #invitation .footer-container a:visited {
+      color: #eee; }
+    #invitation .footer-container a:hover {
+      color: #ccc; }
   #invitation img.fwc {
     width: 70%;
     position: relative;
@@ -226,6 +243,9 @@ body {
             font-size: 14pt; } }
       #invitation .rsvp form textarea {
         height: 15em; }
+        @media (min-width: 0px) and (max-width: 600px) {
+          #invitation .rsvp form textarea {
+            height: 7em; } }
       #invitation .rsvp form label {
         font-size: 14pt;
         text-align: left;
