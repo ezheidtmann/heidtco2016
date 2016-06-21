@@ -64,6 +64,17 @@ $c-orange: lighten(#E7902B, 15%);
   }
 }
 
+@mixin button {
+  @include font-buttons;
+  border: solid 3px black;
+  background: transparent;
+  margin: 1em auto;
+  padding: 0 1em;
+  cursor: pointer;
+  &:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+}
 
 body {
   width: 100%;
@@ -88,6 +99,9 @@ body {
     padding: 2em 0;
     img.invite-you-to {
       width: 75%;
+      @include breakpoint($bp-small) {
+        width: 90%;
+      }
     }
   }
 
@@ -104,9 +118,9 @@ body {
   }
 
   img.fwc {
-    width: 90%;
+    width: 70%;
     @include breakpoint($bp-small) {
-      width: 90%;
+      width: 95%;
     }
 
     position: relative;
@@ -162,13 +176,12 @@ body {
     .buttons {
       margin: 0 auto;
       width: 60%;
+      @include breakpoint($bp-small) {
+        width: 80%;
+      }
       button {
-        @include font-buttons;
+        @include button;
         display: block;
-        border: solid 3px black;
-        background: transparent;
-        margin: 1em auto;
-        cursor: pointer;
         width: 80%;
       }
     }
@@ -184,7 +197,7 @@ body {
         font-family: 'Latin Modern Roman Dunhill', 'latin_modern_roman_dunhil10Rg';
         font-size: 14pt;
         @include breakpoint($bp-small) {
-          font-size: 10pt;
+          font-size: 14pt;
         }
         line-height: 1.5em;
         width: 90%;
@@ -195,26 +208,22 @@ body {
       }
       label {
         font-size: 14pt;
+        @include breakpoint($bp-small) {
+          font-size: 12pt;
+        }
         text-align: left;
         font-style: italic;
-        padding-left: 5%;
+        line-height: 150%;
+        padding: 1em 5% 0.5em 5%;
       }
       input[type=submit] {
-        @include font-buttons;
-        border: solid 3px black;
-        background: transparent;
-        margin: 1em auto;
-        padding: 0 1em;
-        cursor: pointer;
-        &:hover {
-          background: rgba(255, 255, 255, 0.4);
-        }
+        @include button;
       }
       visibility: visible;
       opacity: 1;
       &.done {
         transition-property: opacity;
-        transition-duration: 0.5s;
+        transition-duration: 1.0s;
         opacity: 0;
       }
     }
@@ -223,12 +232,14 @@ body {
       top: 50%;
       left: 50%;
       transform: translateY(-50%) translateX(-50%);
+      line-height: 250%;
+      @include breakpoint($bp-small) {
+        width: 90%;
+      }
       display: none;
-      visibility: none;
-      opacity: 0;
+      opacity: 0.0;
       &.show {
         display: block;
-        visibility: visible;
         transition-property: opacity;
         transition-duration: 0.5s;
         opacity: 1
