@@ -103,12 +103,16 @@
     return reqQueue;  
   }
 
-
   $(document).on('click', '.rsvp-yes', function(ev) { $('.rsvp .buttons').hide(); $('form.yes').show(); });
   $(document).on('click', '.rsvp-regrets',  function(ev) { $('.rsvp .buttons').hide(); $('form.regrets').show(); });
 
   $(document).on('change keydown', 'form[ajax-rsvp]', debounce(function(ev) {
-    save_form($(this), { status: 'in-progress' }).done(function(data, textStatus, jqXHR) {
+    var $form = $(this);
+    if ($form.hasClass('done')) {
+      console.log('not saving rsvp in-progress because the form is closed');
+      return;
+    }
+    save_form($form, { status: 'in-progress' }).done(function(data, textStatus, jqXHR) {
       // nothing to do
       console.log('saved rsvp in progress', rsvp_id);
     });
