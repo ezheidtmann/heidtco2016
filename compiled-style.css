@@ -76,14 +76,16 @@ html {
 
 body {
   width: 100%;
-  background: #FFC987; }
+  background: #e0e0e0; }
 
 #invitation {
   background: #fff;
   position: relative;
   margin: 0 auto;
   width: 100%;
-  max-width: 1000px; }
+  max-width: 1000px;
+  border-left: 3px solid #417975;
+  border-right: 3px solid #417975; }
   #invitation .faces-container {
     width: 100%;
     background: #fdd930;
@@ -120,7 +122,7 @@ body {
     color: white;
     font-family: 'Sawasdee', 'SawasdeeRegular', sans-serif;
     font-size: 20pt;
-    line-height: 1.1em;
+    line-height: normal;
     font-size: 12pt;
     padding: 2em 2em; }
     #invitation .footer-container p {
@@ -154,7 +156,7 @@ body {
   #invitation .details {
     font-family: 'Sawasdee', 'SawasdeeRegular', sans-serif;
     font-size: 20pt;
-    line-height: 1.1em;
+    line-height: normal;
     padding: 0 0.5em;
     text-align: center;
     line-height: 130%; }
@@ -187,7 +189,7 @@ body {
     #invitation .rsvp p {
       padding: 1em 0;
       text-align: center;
-      font-family: 'Latin Modern Roman Dunhill', 'latin_modern_roman_dunhil10Rg';
+      font-family: 'Sawasdee', 'SawasdeeRegular', sans-serif;
       font-size: 32pt; }
       @media (min-width: 0px) and (max-width: 600px) {
         #invitation .rsvp p {
@@ -199,13 +201,14 @@ body {
         #invitation .rsvp .buttons {
           width: 80%; } }
       #invitation .rsvp .buttons button {
-        font-family: 'Latin Modern Roman Dunhill', 'latin_modern_roman_dunhil10Rg';
+        font-family: 'Sawasdee', 'SawasdeeRegular', sans-serif;
         font-size: 32pt;
+        line-height: normal;
         border: solid 3px white;
         color: white;
         background: transparent;
         margin: 1em auto;
-        padding: 0 1em;
+        padding: 0.5em 1em;
         cursor: pointer;
         display: block;
         width: 80%; }
@@ -218,7 +221,7 @@ body {
       position: relative; }
     #invitation .rsvp form {
       display: none;
-      font-family: 'Latin Modern Roman Dunhill', 'latin_modern_roman_dunhil10Rg';
+      font-family: 'Sawasdee', 'SawasdeeRegular', sans-serif;
       font-size: 24pt;
       line-height: 1.5em;
       visibility: visible;
@@ -233,9 +236,8 @@ body {
         display: block;
         margin: 0 auto; }
       #invitation .rsvp form textarea, #invitation .rsvp form input[type=text] {
-        font-family: 'Latin Modern Roman Dunhill', 'latin_modern_roman_dunhil10Rg';
+        font-family: 'Sawasdee', 'SawasdeeRegular', sans-serif;
         font-size: 14pt;
-        line-height: 1.5em;
         width: 90%;
         padding: 0.5em; }
         @media (min-width: 0px) and (max-width: 600px) {
@@ -256,13 +258,14 @@ body {
           #invitation .rsvp form label {
             font-size: 12pt; } }
       #invitation .rsvp form input[type=submit] {
-        font-family: 'Latin Modern Roman Dunhill', 'latin_modern_roman_dunhil10Rg';
+        font-family: 'Sawasdee', 'SawasdeeRegular', sans-serif;
         font-size: 32pt;
+        line-height: normal;
         border: solid 3px white;
         color: white;
         background: transparent;
         margin: 1em auto;
-        padding: 0 1em;
+        padding: 0.5em 1em;
         cursor: pointer; }
         @media (min-width: 0px) and (max-width: 600px) {
           #invitation .rsvp form input[type=submit] {
