@@ -57,6 +57,11 @@ $c-grey: #e0e0e0;
   line-height: normal;
 }
 
+@mixin font-body {
+  font-family: 'Georgia', 'Times', 'Times New Roma', serif;
+  line-height: normal;
+}
+
 @mixin font-buttons {
   font-family: 'Sawasdee', 'SawasdeeRegular', sans-serif;
   font-size: 32pt;
@@ -146,23 +151,26 @@ body {
 
   .info-container {
     width: 100%;
-    @include font-details;
+    @include font-body;
     font-size: 14pt;
     padding: 2em 2.5em;
     p { margin-bottom: 1em; line-height: 140%; }
     p:last-child { margin-bottom: 0.5em; }
 
     h2 {
+      @include font-lead;
       margin: 0.3em -0.2em;
       font-size: 30pt;
       font-weight: bold;
     }
     h3 {
+      @include font-lead;
       margin: 0.3em -0.1em;
       font-size: 20pt;
       font-weight: bold;
     }
     h4 {
+      @include font-lead;
       margin: 0.3em 0;
       font-size: 16pt;
       font-weight: bold;
@@ -178,7 +186,7 @@ body {
 
   .footer-container {
     width: 100%;
-    @include font-details;
+    @include font-body;
     @include container-gold;
     font-size: 12pt;
     padding: 2em 2em;

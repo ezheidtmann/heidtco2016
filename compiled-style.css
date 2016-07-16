@@ -118,8 +118,7 @@ body {
               transform: translateX(-50%); }
   #invitation .info-container {
     width: 100%;
-    font-family: 'Sawasdee', 'SawasdeeRegular', sans-serif;
-    font-size: 20pt;
+    font-family: 'Georgia', 'Times', 'Times New Roma', serif;
     line-height: normal;
     font-size: 14pt;
     padding: 2em 2.5em; }
@@ -129,17 +128,35 @@ body {
     #invitation .info-container p:last-child {
       margin-bottom: 0.5em; }
     #invitation .info-container h2 {
+      font-family: 'Sawasdee', 'SawasdeeRegular', sans-serif;
+      font-size: 24pt;
+      line-height: 1.5em;
       margin: 0.3em -0.2em;
       font-size: 30pt;
       font-weight: bold; }
+      @media (min-width: 0px) and (max-width: 600px) {
+        #invitation .info-container h2 {
+          font-size: 20pt; } }
     #invitation .info-container h3 {
+      font-family: 'Sawasdee', 'SawasdeeRegular', sans-serif;
+      font-size: 24pt;
+      line-height: 1.5em;
       margin: 0.3em -0.1em;
       font-size: 20pt;
       font-weight: bold; }
+      @media (min-width: 0px) and (max-width: 600px) {
+        #invitation .info-container h3 {
+          font-size: 20pt; } }
     #invitation .info-container h4 {
+      font-family: 'Sawasdee', 'SawasdeeRegular', sans-serif;
+      font-size: 24pt;
+      line-height: 1.5em;
       margin: 0.3em 0;
       font-size: 16pt;
       font-weight: bold; }
+      @media (min-width: 0px) and (max-width: 600px) {
+        #invitation .info-container h4 {
+          font-size: 20pt; } }
     #invitation .info-container:nth-child(odd) {
       background: #417975;
       color: white; }
@@ -156,8 +173,7 @@ body {
         color: #666; }
   #invitation .footer-container {
     width: 100%;
-    font-family: 'Sawasdee', 'SawasdeeRegular', sans-serif;
-    font-size: 20pt;
+    font-family: 'Georgia', 'Times', 'Times New Roma', serif;
     line-height: normal;
     background: #fdd930;
     color: black;
