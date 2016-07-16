@@ -116,23 +116,61 @@ body {
       left: 50%;
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%); }
-  #invitation .footer-container {
+  #invitation .info-container {
     width: 100%;
-    background: #417975;
-    color: white;
     font-family: 'Sawasdee', 'SawasdeeRegular', sans-serif;
     font-size: 20pt;
     line-height: normal;
+    font-size: 14pt;
+    padding: 2em 2.5em; }
+    #invitation .info-container p {
+      margin-bottom: 1em;
+      line-height: 140%; }
+    #invitation .info-container p:last-child {
+      margin-bottom: 0.5em; }
+    #invitation .info-container h2 {
+      margin: 0.3em -0.2em;
+      font-size: 30pt;
+      font-weight: bold; }
+    #invitation .info-container h3 {
+      margin: 0.3em -0.1em;
+      font-size: 20pt;
+      font-weight: bold; }
+    #invitation .info-container h4 {
+      margin: 0.3em 0;
+      font-size: 16pt;
+      font-weight: bold; }
+    #invitation .info-container:nth-child(odd) {
+      background: #417975;
+      color: white; }
+      #invitation .info-container:nth-child(odd) a, #invitation .info-container:nth-child(odd) a:visited {
+        color: #eee; }
+      #invitation .info-container:nth-child(odd) a:hover {
+        color: #ccc; }
+    #invitation .info-container:nth-child(even) {
+      background: #fdd930;
+      color: black; }
+      #invitation .info-container:nth-child(even) a, #invitation .info-container:nth-child(even) a:visited {
+        color: #444; }
+      #invitation .info-container:nth-child(even) a:hover {
+        color: #666; }
+  #invitation .footer-container {
+    width: 100%;
+    font-family: 'Sawasdee', 'SawasdeeRegular', sans-serif;
+    font-size: 20pt;
+    line-height: normal;
+    background: #fdd930;
+    color: black;
     font-size: 12pt;
     padding: 2em 2em; }
+    #invitation .footer-container a, #invitation .footer-container a:visited {
+      color: #444; }
+    #invitation .footer-container a:hover {
+      color: #666; }
     #invitation .footer-container p {
       margin-bottom: 1em; }
     #invitation .footer-container p:last-child {
       margin-bottom: 0; }
-    #invitation .footer-container a, #invitation .footer-container a:visited {
-      color: #eee; }
-    #invitation .footer-container a:hover {
-      color: #ccc; }
   #invitation img.fwc {
     width: 70%;
     position: relative;

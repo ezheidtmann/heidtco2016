@@ -79,6 +79,20 @@ $c-grey: #e0e0e0;
   }
 }
 
+@mixin container-gold {
+  background: $c-gold;
+  color: black;
+  a, a:visited { color: #444; }
+  a:hover { color: #666; }
+}
+
+@mixin container-green {
+  background: $c-green;
+  color: white;
+  a, a:visited { color: #eee; }
+  a:hover { color: #ccc; }
+}
+
 body {
   width: 100%;
   background: $c-grey;
@@ -130,17 +144,46 @@ body {
     padding: 2em 0;
   }
 
+  .info-container {
+    width: 100%;
+    @include font-details;
+    font-size: 14pt;
+    padding: 2em 2.5em;
+    p { margin-bottom: 1em; line-height: 140%; }
+    p:last-child { margin-bottom: 0.5em; }
+
+    h2 {
+      margin: 0.3em -0.2em;
+      font-size: 30pt;
+      font-weight: bold;
+    }
+    h3 {
+      margin: 0.3em -0.1em;
+      font-size: 20pt;
+      font-weight: bold;
+    }
+    h4 {
+      margin: 0.3em 0;
+      font-size: 16pt;
+      font-weight: bold;
+    }
+
+    &:nth-child(odd) {
+      @include container-green;
+    }
+    &:nth-child(even) {
+      @include container-gold;
+    }
+  }
+
   .footer-container {
     width: 100%;
-    background: $c-green;
-    color: white;
     @include font-details;
+    @include container-gold;
     font-size: 12pt;
     padding: 2em 2em;
     p { margin-bottom: 1em; }
     p:last-child { margin-bottom: 0; }
-    a, a:visited { color: #eee; }
-    a:hover { color: #ccc; }
   }
 
   img.fwc {
