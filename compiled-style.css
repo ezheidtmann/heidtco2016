@@ -124,14 +124,14 @@ body {
     padding: 2em 2.5em; }
     #invitation .info-container p {
       margin-bottom: 1em;
-      line-height: 140%; }
+      line-height: 150%; }
     #invitation .info-container p:last-child {
       margin-bottom: 0.5em; }
     #invitation .info-container h2 {
       font-family: 'Sawasdee', 'SawasdeeRegular', sans-serif;
       font-size: 24pt;
       line-height: 1.5em;
-      margin: 0.3em -0.2em;
+      margin: 1em 0;
       font-size: 30pt;
       font-weight: bold; }
       @media (min-width: 0px) and (max-width: 600px) {
@@ -141,8 +141,8 @@ body {
       font-family: 'Sawasdee', 'SawasdeeRegular', sans-serif;
       font-size: 24pt;
       line-height: 1.5em;
-      margin: 0.3em -0.1em;
-      font-size: 20pt;
+      margin: 0.8em 0;
+      font-size: 24pt;
       font-weight: bold; }
       @media (min-width: 0px) and (max-width: 600px) {
         #invitation .info-container h3 {
@@ -151,21 +151,24 @@ body {
       font-family: 'Sawasdee', 'SawasdeeRegular', sans-serif;
       font-size: 24pt;
       line-height: 1.5em;
-      margin: 0.3em 0;
-      font-size: 16pt;
+      margin: 0.6em 0;
+      font-size: 20pt;
       font-weight: bold; }
       @media (min-width: 0px) and (max-width: 600px) {
         #invitation .info-container h4 {
           font-size: 20pt; } }
     #invitation .info-container:nth-child(odd) {
-      background: #417975;
-      color: white; }
+      background: #d2e7e5; }
+      #invitation .info-container:nth-child(odd) p {
+        color: #222; }
+      #invitation .info-container:nth-child(odd) h1, #invitation .info-container:nth-child(odd) h2, #invitation .info-container:nth-child(odd) h3, #invitation .info-container:nth-child(odd) h4, #invitation .info-container:nth-child(odd) h5, #invitation .info-container:nth-child(odd) h6 {
+        color: #000; }
       #invitation .info-container:nth-child(odd) a, #invitation .info-container:nth-child(odd) a:visited {
-        color: #eee; }
+        color: #444; }
       #invitation .info-container:nth-child(odd) a:hover {
-        color: #ccc; }
+        color: #666; }
     #invitation .info-container:nth-child(even) {
-      background: #fdd930;
+      background: #feec95;
       color: black; }
       #invitation .info-container:nth-child(even) a, #invitation .info-container:nth-child(even) a:visited {
         color: #444; }
@@ -175,7 +178,7 @@ body {
     width: 100%;
     font-family: 'Georgia', 'Times', 'Times New Roma', serif;
     line-height: normal;
-    background: #fdd930;
+    background: #feec95;
     color: black;
     font-size: 12pt;
     padding: 2em 2em; }
